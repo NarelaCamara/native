@@ -8,7 +8,7 @@ import Counter from './src/screens/Counter';
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Counter name={'Narela'} />
+      <Counter number={10} />
     </SafeAreaView>
   );
 }
