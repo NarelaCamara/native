@@ -1,11 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-interface Props {}
+interface Props {
+  name?: string;
+}
 
-const Counter = (props: Props) => {
+const Counter = ({ name }: Props) => {
   return (
     <View style={styleSheet.container}>
-      <Text style={styleSheet.title}>Hola Nare</Text>
+      <Text numberOfLines={1} ellipsizeMode="tail" style={styleSheet.title}>
+        Hola {name}, como estas? Algun nuevo proyecto en el que estes
+        trabajando?
+      </Text>
     </View>
   );
 };
@@ -13,7 +18,7 @@ const Counter = (props: Props) => {
 const styleSheet = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    justifyContent: 'center',
   },
   title: {
     fontSize: 45,
