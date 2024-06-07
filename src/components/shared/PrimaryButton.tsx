@@ -2,20 +2,20 @@ import React from 'react';
 import { Platform, Pressable, StyleSheet, Text } from 'react-native';
 
 interface Props {
-  onLongPress: () => void;
-  onPress: () => void;
+  onLongPress?: () => void;
+  onPress?: () => void;
   text: string;
 }
 
 export const PrimaryButton = ({ onLongPress, onPress, text }: Props) => {
   return (
     <Pressable
-      onPress={() => onPress()}
+      onPress={() => onPress && onPress()}
       style={({ pressed }) => [
         styleSheet.button,
         pressed && styleSheet.buttonPressed,
       ]}
-      onLongPress={() => onLongPress()}
+      onLongPress={() => onLongPress && onLongPress()}
     >
       <Text>{text}</Text>
     </Pressable>
