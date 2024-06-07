@@ -1,11 +1,8 @@
 import { Text, View } from 'react-native';
 
-interface Props {
-  estado: '';
-}
+interface Props {}
 
 const Counter = (props: Props) => {
-  const { estadon } = props;
   return (
     <View>
       <Text>Hola Nare</Text>
