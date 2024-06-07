@@ -2,20 +2,15 @@
  * @format
  */
 import React from 'react';
-import {
-  Text,
-  View,
-} from 'react-native';
-
+import { SafeAreaView } from 'react-native';
+import Counter from './src/screens/Counter';
 
 function App(): React.JSX.Element {
-
   return (
-    <View>
-      <Text>Hola NAre. cuchaskhasduas</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Counter />
+    </SafeAreaView>
   );
 }
-
 
 export default App;
