@@ -85,3 +85,7 @@ To create components
 ```bash
 tsrafc
 ```
+
+# Librerias
+
+[React Native Paper](https://reactnativepaper.com/)

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { PrimaryButton } from '../components';
+import { Button, FAB } from 'react-native-paper';
 
 interface Props {
   number: number;
@@ -22,13 +23,24 @@ const Counter = ({ number }: Props) => {
         text="Incrementar +1"
       />
 
-      <PrimaryButton
+      <Button
+        mode="contained"
         onPress={() => {
           const rest = num - 1 <= 0 ? 0 : num - 1;
           setNum(rest);
         }}
         onLongPress={() => setNum(0)}
-        text="Decrementar -1"
+      >
+        Decrementar -1
+      </Button>
+
+      <FAB
+        icon="plus"
+        style={styleSheet.fab}
+        onPress={() => {
+          setNum(num + 1);
+        }}
+        onLongPress={() => setNum(0)}
       />
     </View>
   );
@@ -57,6 +69,12 @@ const styleSheet = StyleSheet.create({
   },
   text: {
     color: 'white',
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: Platform.OS === 'android' ? 10 : 0,
   },
 });
 
