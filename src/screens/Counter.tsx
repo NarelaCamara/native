@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { PrimaryButton } from '../components';
 import { Button, FAB } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props {
   number: number;
@@ -33,9 +34,10 @@ const Counter = ({ number }: Props) => {
       >
         Decrementar -1
       </Button>
+      <Icon name="accessibility-outline" size={25} />
 
       <FAB
-        icon="plus"
+        label="plus"
         style={styleSheet.fab}
         onPress={() => {
           setNum(num + 1);
