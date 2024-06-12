@@ -89,3 +89,8 @@ tsrafc
 # Librerias
 
 [React Native Paper](https://reactnativepaper.com/)
+
+
+icons
+
+C:\Users\Nare\Documents\Proyectos\AwesomeTSProject\node_modules\react-native-vector-icons\Fonts
